@@ -14,17 +14,16 @@ function getRandomArray(length, min, max) {
     }
 }
 const randomArray = getRandomArray(10, 1, 10, );
-console.log(randomArray);
+console.log('Array of random integers:', randomArray);
 
 // 3) Створіть функцію, яка рахує середнє арифметичне всіх переданих в неї аргументів
 function getAverage(...numbers) {
     let numberIsAverage;
     const numbersArr = numbers.filter(number => Number.isInteger(number));
-    sumNumbers = numbersArr.reduce((x, y) => x + y, 0);
-    return numberIsAverage = sumNumbers / numbersArr.length;
+    return numberIsAverage = numbersArr.reduce((x, y) => x + y, 0) / numbersArr.length;
 }
 const numberIsAverage = getAverage(1, 2.3, 3, 4, 5, '5a');
-console.log(numberIsAverage);
+console.log('The arithmetic mean of all arguments:', numberIsAverage);
 
 // 5) Створіть функцію, яка фільтрує парні числа передані як аргументи функції
 function filterEvenNumbers(...numbers) {
@@ -32,7 +31,7 @@ function filterEvenNumbers(...numbers) {
     return withoutEvenNumbersArr = numbers.filter(number => Number.isInteger(number) && number % 2);
 }
 const withoutEvenNumbersArr = filterEvenNumbers(1, 2.3, 'a', 3, 4, 5, 8, '8a');
-console.log(withoutEvenNumbersArr);
+console.log('Even numbers are:', withoutEvenNumbersArr);
 
 // 6) Створіть функцію, яка порахує кількість чисел більших 0
 function countPositiveNumbers(...numbers) {
@@ -40,7 +39,7 @@ function countPositiveNumbers(...numbers) {
     return positiveNumbersInArr = numbers.filter(number => Number.isInteger(number) && number >= 0).length;
 }
 const positiveNumbersInArr = countPositiveNumbers(1, -1, -5, -7, 10, 5, 3, -11);
-console.log(positiveNumbersInArr);
+console.log('The number of numbers is greater than 0:', positiveNumbersInArr);
 
 // 7) Створіть функцію, яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5
 function getDividedByFive(...numbers) {
@@ -48,7 +47,7 @@ function getDividedByFive(...numbers) {
     return dividedByFiveArr = numbers.filter(number => Number.isInteger(number) && !(number % 5));
 }
 const dividedByFiveArr = getDividedByFive(1, -1, -5, -7, 10, 5, 3, -11, 15);
-console.log(dividedByFiveArr);
+console.log('Elements that are divisible by 5:', dividedByFiveArr);
 
 // 9) Створіть функцію, яка розбиває кожне слово на умовні склади по 3 букви
 function divideByThree(words) {
@@ -60,4 +59,4 @@ function divideByThree(words) {
     return divideByThreeArr;
 }
 const divideByThreeArr = divideByThree('qweqweq WEQWEQW');
-console.log(divideByThreeArr);
+console.log('The word is divided into syllables of 3 letters:', divideByThreeArr);
